@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\sortinginapi.props" />
+</Project>
