@@ -1,14 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
 namespace sortinginapi.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     [Route("api/Home")]
     public class HomeController : Controller
     {
 
         [HttpPost]
-        
         public IActionResult Index([FromBody] int[] arr)
         {
             int temp = 0;
